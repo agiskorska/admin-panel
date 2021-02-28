@@ -1,0 +1,30 @@
+.topnav{
+  display: flex;
+  flex-direction: row;
+  color: black;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  
+  &__option{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    border-left: $sidebar-font 1px solid;
+    color: $sidebar-font;
+    
+    > *{
+      margin: 0 5px;
+    }
+  }
+
+  &__option{
+    &--large{
+      font-size: $wallet-size;
+      font-family: $paragraph-font;
+      font-weight: 400;
+    }
+  }
+}

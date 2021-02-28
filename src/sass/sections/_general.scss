@@ -1,0 +1,12 @@
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  outline: $sidebar-font solid 1px;
+}
+
+.link{
+  text-decoration: none;
+  color: $link;
+  font-family: $paragraph-font;
+}
