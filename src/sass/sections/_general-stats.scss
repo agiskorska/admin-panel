@@ -1,0 +1,70 @@
+.date-picker{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  &__calendar{
+    width: 330px;
+    height: 40px;
+    border: $line 1px solid;
+    border-radius: 3px;
+  }
+
+  &__btn{
+    margin-left: 10px;
+  }
+}
+
+.calendar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__start, &__end{
+    border: none;
+    color: $sidebar-font;
+    font-family: $paragraph-font;
+  }
+}
+
+.data{
+  padding: 20px 20%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  &__single{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 40px;
+    margin: 0 5%;
+    flex-basis: 40%;
+  }
+
+  &__chart{
+    margin: 30px 0;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .data{
+    width: 100%;
+    display: block;
+
+    &__single{
+      flex-basis: 100%;
+    }
+
+    &__chart{
+      width: 90vw;
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.panel{
+  color: $sidebar-font;
+  font-family: $side-bar-menu-font;
+  font-weight: 600;
+
+  &:hover{
+    box-shadow: $hover-panel;
+  }
+  
+  &__header{
+    text-transform: uppercase;
+    font-size: $header-font-size;
+
+    padding: 15px;
+  }
+
+  &__line{
+    border-bottom: $line 1px solid;
+  }
+}
+
+
+@media (max-width: 992px){
+  .panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__header{
+      width: 100%;
+      padding: 0;
+      line-height: 30px;
+    }
+
+    &__title{
+      padding-left: 15px;
+    }
+
+  } 
+}

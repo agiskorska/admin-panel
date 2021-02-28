@@ -4,18 +4,26 @@ $brand-main-color: #ff0000;
 $sidebar-background: #000000;
 $main-section: #FFFFFF;
 $background-color: #F5F5F2;
-$sidebar-font: #818181;
-$line: #333333;
+$sidebar-font: #8181818e;
+$paragraph-font-color: #8181818e;
+$line: #8181818e;
 $active-link: white;
 $active-background: #282828;
+$hover-link: rgba(220,220,220, 0.5);
 $accent: #F58220;
 $logo: white;
 $link: #6D92AC;
+
+/* Effects */
+$hover-panel: 5px 3px 10px rgba(220,220,220, 0.5);
 
 /* Font sizes */
 $paragraph-font-size: 16px;
 $sidebar-font-size: 20px;
 $wallet-size: 20px;
+$header-font-size: 16px;
+$phone-font-size: 10px;
+$logo-font-size: 25px;
 
 /* Fonts */
 $brand-font: "Open Sans", Helvetica, Arial;
@@ -27,3 +35,6 @@ $logo-font: 'Pacifico', cursive;
 /* Margins */
 $main-panel: 1%;
 $main-panel-width: 83%;
+
+/* Line height */
+$title-bar-height: 50px;

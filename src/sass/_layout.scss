@@ -1,29 +1,44 @@
-.main {
+.main{
   background-color: $background-color;
+
 }
 
-.sidebar {
+.sidebar{
   position: fixed;
-  width: 15%;
+  width: 15vw;
   background-color: $sidebar-background;
   height: 100%;
   color: $sidebar-font;
 }
 
-.header, .panel {
+.header, .panel{
   background-color: $main-section;
   margin-bottom: $main-panel;
 }
 
-.header {
+.header{
   width: 100%;
   height: 50px;
 }
 
-.panel {
+.panel{
   width: $main-panel-width;
   min-height: 300px;
-  margin-left: $main-panel;
+  margin-left: 16%;
   margin-right: $main-panel;
-  float: right;
+}
+
+@media (max-width: 992px) {
+  .main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 220vh;
+  }
+
+  .panel{
+    position: relative;
+    width: 98%;
+    margin-left: $main-panel;
+  }
 }

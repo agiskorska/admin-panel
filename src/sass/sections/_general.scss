@@ -10,3 +10,24 @@
   color: $link;
   font-family: $paragraph-font;
 }
+
+.btn{
+  background-color: $accent;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  
+  &:hover{
+    transform: scale(1.2);
+  }
+}
+
+
+@media (max-width: 992px) {
+  .btn{
+    font-size: $phone-font-size;
+  }
+}
