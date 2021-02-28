@@ -18,7 +18,7 @@
       <input class="input-box" type="checkbox" id="dropdown" style="display:none;">
       <div class="sidebar-toggle">
           <div class="option">
-              <a href="./index.html" class="option__link active">
+              <a href="./index.html" class="option__link">
                   <span class="icon"></span>General 
               </a>
               <a href="./details.html" class="option__link">
@@ -30,7 +30,7 @@
               <a href="./banners.html" class="option__link">
                   <span class="icon"></span>Banners 
               </a>
-              <a href="./personal.html" class="option__link">
+              <a href="./personal.html" class="option__link active">
                   <span class="icon"></span>Personal data 
               </a>
               <a href="./payout.html" class="option__link">
@@ -90,5 +90,31 @@
           </div>
       </div>
   </header>
+    <section class="panel">
+        <div class="panel__header panel__line">
+            Personal Data
+        </div>
+        <form class="form">
+            <div class="form__main panel__line form__section">
+                <div class="form__name"><span>Name</span><input type="text" class="form__input"></div>
+                <div class="form__name"><span>Surname</span><input type="text" class="form__input"></div>
+                <div class="form__name"><span>E-mail</span><input type="text" class="form__input"></div>        
+                <div class="form__name"><span>Phone number</span><input type="text" class="form__input"></div> 
+            </div>
+            <div class="form__social panel__line form__section">
+                <div class="form__name"><span>Skype</span><input type="text" class="form__input"></div>
+                <div class="form__name"><span>ICQ</span><input type="text" class="form__input"></div>        
+                <div class="form__name"><span>MSN</span><input type="text" class="form__input"></div> 
+            </div>
+            <div class="form__wallet panel__line form__section">
+                <div class="form__name"><span>Wallet</span><input type="text" class="form__input"></div>
+            </div>
+            <div class="form__pass panel__line form__section">
+                <div class="form__name"><span>Password</span><input type="text" class="form__input"></div>
+                <div class="form__name"><span>Repeat</span><input type="text" class="form__input"></div>        
+            </div>
+            <div class="form__section"><div class="btn panel__btn">Save</div></div>
+        </form>
+    </section>
 </body>
 </html>
