@@ -1,33 +1,3 @@
-.date-picker{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0;
-
-  &__calendar{
-    width: 330px;
-    height: 40px;
-    border: $line 1px solid;
-    border-radius: 3px;
-  }
-
-  &__btn{
-    margin-left: 10px;
-  }
-}
-
-.calendar{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__start, &__end{
-    border: none;
-    color: $sidebar-font;
-    font-family: $paragraph-font;
-  }
-}
 
 .data{
   padding: 20px 20%;

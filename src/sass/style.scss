@@ -3,11 +3,9 @@
 @import "normalize";
 @import "layout";
 
+/* import components */
+@import "components/table";
+
 /* import sections */
-@import "sections/general";
-@import "sections/header";
-@import "sections/sidebar";
-@import "sections/panel";
-@import "sections/general-stats";
-@import "sections/links";
+@import "pages/general";
 @import "pages/personal";

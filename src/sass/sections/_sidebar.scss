@@ -23,7 +23,7 @@
     list-style: none;
     color: $sidebar-font;
 
-    .icon{
+    [class^="icon-"]{
       margin-right: 10%;
     }
   }  
@@ -97,7 +97,7 @@
   }
 }
 
-.sidenav{
+.sidenav, .sidebar-nav{
   display: none;
 }
 
@@ -122,7 +122,7 @@
     padding-left: 0;
   }
 
-  .sidenav{
+  .sidenav, .sidebar-nav{
     display: flex;
     flex-direction: column;
   

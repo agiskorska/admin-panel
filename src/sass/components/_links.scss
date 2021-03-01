@@ -26,6 +26,10 @@
     background-color: $hover-link;
     cursor: pointer;
 
+    .icon-links{
+      color: $accent;
+    }
+
     .link__icon{
       display: block;
     }
@@ -44,7 +48,7 @@
   
   &__icon{
     display: none;
-    margin: 1%;
+    margin: 0 1%;
   }
 }
 
@@ -72,9 +76,5 @@
       display: block;
       width: 40%;
     }
-
-    // &__icon{
-    //   display: none;
-    // }
   }
 }

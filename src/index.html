@@ -7,6 +7,7 @@
     <title>Document</title>
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./images/icons/css/Glyphter.css">
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Pacifico&family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="main">
@@ -19,25 +20,25 @@
         <div class="sidebar-toggle">
             <div class="option">
                 <a href="./index.html" class="option__link active">
-                    <span class="icon"></span>General 
+                    <div class="icon-general"></div><div>General</div>
                 </a>
                 <a href="./details.html" class="option__link">
-                    <span class="icon"></span>Details 
+                    <span class="icon-details"></span><span>Details</span> 
                 </a>
                 <a href="./links.html" class="option__link">
-                    <span class="icon"></span>Links 
+                    <span class="icon-links"></span><span>Links</span> 
                 </a>
                 <a href="./banners.html" class="option__link">
-                    <span class="icon"></span>Banners 
+                    <span class="icon-banners"></span><span>Banners</span> 
                 </a>
                 <a href="./personal.html" class="option__link">
-                    <span class="icon"></span>Personal data 
+                    <span class="icon-personaldata"></span><span>Personal data</span> 
                 </a>
                 <a href="./payout.html" class="option__link">
-                    <span class="icon"></span>Payout 
+                    <span class="icon-payout"></span><span>Payout</span> 
                 </a>       
                 <a href="./postback.html" class="option__link">
-                    <span class="icon"></span>Postback 
+                    <span class="icon-postback"></span><span>Postback</span> 
                 </a>       
             </div> 
             <div class="manager">
@@ -53,19 +54,19 @@
             <div class="sidebar-nav">
                 <div class="sidenav">
                     <div class="sidenav__option sidenav__option--large">
-                        <div class="icon"></div>
+                        <div class="icon-wallet"></div>
                         <div>$1,500.00</div>
-                        <div class="icon"></div>
+                        <div class="icon-arrow-down"></div>
                     </div>
                     <div class="sidenav__option">
-                        <div class="icon"></div>
+                        <div class="icon-notification"></div>
                     </div>
                     <div class="sidenav__option sidenav__option--small">
-                        <div class="icon"></div>
+                        <div class="icon-login"></div>
                         <div><a href="#" class="link">Leonardo Dicaprio</a></div>
                     </div>
                     <div class="sidenav__option">
-                        <div class="icon"></div>
+                        <div class="icon-quit"></div>
                     </div>
                 </div>
             </div>
@@ -74,19 +75,19 @@
     <header class="header">
         <div class="topnav">
             <div class="topnav__option topnav__option--large">
-                <div class="icon"></div>
+                <div class="icon-wallet"></div>
                 <div>$1,500.00</div>
-                <div class="icon"></div>
+                <div class="icon-arrow-down"></div>
             </div>
             <div class="topnav__option">
-                <div class="icon"></div>
+                <div class="icon-notification"></div>
             </div>
             <div class="topnav__option topnav__option--small">
-                <div class="icon"></div>
+                <div class="iconlogin"></div>
                 <div><a href="#" class="link">Leonardo Dicaprio</a></div>
             </div>
             <div class="topnav__option">
-                <div class="icon"></div>
+                <div class="icon-quit"></div>
             </div>
         </div>
     </header>
@@ -96,12 +97,13 @@
         </div>
         <div class="panel__date-picker panel__line date-picker">
             <div class="date-picker__calendar calendar">
-                <input type="date" value="2021-07-22"
-                min="2021-01-01" max="2021-12-31" class="date-picker__date calendar__start">
-                <input type="date" value="2021-07-22"
-                min="2021-01-01" max="2021-12-31"   class="date-picker__date calendar__end">
+                <input type="text" value="2021-07-22"
+                class="date-picker__date calendar__start">
+                <input type="text" value="2021-07-22"
+                  class="date-picker__date calendar__end">
+                <div class="icon-calendar"></div>
             </div>
-            <div class="btn date-picker__btn"><div class="icon"></div></div>
+            <div class="btn date-picker__btn"><div class="icon-refresh"></div></div>
         </div>
         <div class="panel__content data">
             <div class="data__single panel__line">
@@ -138,50 +140,50 @@
             <div class="links__link link panel__line">
                 <div class="link__title">Home Page</div>
                 <a href="http://www.yourpage.com" class="link__href">http://www.yourpage.com</a>
-                <div class="link__icon icon"></div>
-                <div class="link__icon icon"></div>
+                <div class="link__icon icon-links"></div>
+                <div class="link__icon icon-trash"></div>
             </div>
             <div class="links__link link panel__line">
                 <div class="link__title">Currently offer</div>
                 <a href="http://www.currently.com" class="link__href">http://www.currently.com</a>
-                <div class="link__icon icon"></div>
-                <div class="link__icon icon"></div>
+                <div class="link__icon icon-links"></div>
+                <div class="link__icon icon-trash"></div>
             </div>
             <div class="links__link link panel__line">
                 <div class="link__title">Blurpix</div>
                 <a href="http://blurpix.com" class="link__href">http://blurpix.com</a>
-                <div class="link__icon icon"></div>
-                <div class="link__icon icon"></div>
+                <div class="link__icon icon-links"></div>
+                <div class="link__icon icon-trash"></div>
             </div>
             <div class="links__link link panel__line">
                 <div class="link__title">Your Site</div>
                 <a href="http://www.yoursite.com" class="link__href">http://www.yoursite.com</a>
-                <div class="link__icon icon"></div>
-                <div class="link__icon icon"></div>
+                <div class="link__icon icon-links"></div>
+                <div class="link__icon icon-trash"></div>
             </div>
             <div class="links__link link panel__line">
                 <div class="link__title">Google</div>
                 <a href="http://www.google.com" class="link__href">http://www.google.com</a>
-                <div class="link__icon icon"></div>
-                <div class="link__icon icon"></div>
+                <div class="link__icon icon-links"></div>
+                <div class="link__icon icon-trash"></div>
             </div>
             <div class="links__link link panel__line">
                 <div class="link__title">Facebook</div>
                 <a href="http://www.facebook.com" class="link__href">http://www.facebook.com</a>
-                <div class="link__icon icon"></div>
-                <div class="link__icon icon"></div>
+                <div class="link__icon icon-links"></div>
+                <div class="link__icon icon-trash"></div>
             </div>
             <div class="links__link link panel__line">
                 <div class="link__title">Dashboard</div>
                 <a href="http://www.dashboard.com" class="link__href">http://www.dashboard.com</a>
-                <div class="link__icon icon"></div>
-                <div class="link__icon icon"></div>
+                <div class="link__icon icon-links"></div>
+                <div class="link__icon icon-trash"></div>
             </div>
             <div class="links__link link panel__line">
                 <div class="link__title">Twitter</div>
                 <a href="http://www.twitter.com" class="link__href">http://www.twitter.com</a>
-                <div class="link__icon icon"></div>
-                <div class="link__icon icon"></div>
+                <div class="link__icon icon-links"></div>
+                <div class="link__icon icon-trash"></div>
             </div>
             <div class="links__link">
                 <div class="btn links__btn ">
@@ -190,12 +192,42 @@
             </div>
         </div>
     </section>
+    <section class="overlay hidden">
+        <div class="popup popup-manager panel">
+            <div class="panel__header panel__line">
+                Online chat with your manager
+                <div class="icon-close"></div>
+            </div>
+            <div class="panel__card card panel__line">
+                <div class="card__img">
+                    <img src="./images/profilePicture.jpg" alt="Mickey M.">
+                </div>
+                <div class="card__name">
+                    <div class="name">
+                        Mickey M.
+                    </div>
+                    <div class="status">
+                        online
+                    </div>
+                </div>
+            </div>
+            <div class="panel__chat chat">
+                <div class="chat__msg msg panel__line">
+                    <div class="msg__received">Hello, how can I help?</div>
+                    <div class="msg__sent">I need to withdraw my monies</div>
+                    <div class="msg__received">Ok. 5min.</div>
+                </div>
+                <div class="chat__type">
+                    <div class="input">
+                        <span class="icon-message"></span>
+                        <input type="text" class="chat__type__input" placeholder="Enter your message">
+                    </div>
+                    <div class="btn">Send</div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
-
-<!-- PYTANIA: 
-    * jak podlaczyc ikonki?
-    * jak zrobic kalendarz, zeby nie bylo ikony kalendarza w pierwszym inpucie?
--->
 </html>
 
 

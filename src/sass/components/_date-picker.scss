@@ -1,0 +1,40 @@
+.date-picker{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  &__calendar{
+    width: 30%;
+    height: 40px;
+    border: $line 1px solid;
+    border-radius: 3px;
+  }
+
+  &__btn{
+    margin-left: 10px;
+    
+    .icon-refresh{
+      color: $button-color;
+    }
+  }
+}
+
+.calendar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__start, &__end{
+    border: none;
+    color: $sidebar-font;
+    font-family: $paragraph-font;
+  }
+
+  .icon-calendar{
+    padding: 0 10px;
+    border-left: $line 1px solid;
+    font-size: 20px;
+  }
+}
