@@ -229,118 +229,27 @@
                 <div class="table__col">Turnover <span class="icon-arrow-down"></span></div>
                 <div class="table__col">Deal <span class="icon-arrow-down"></span></div>
             </div>
+        {{#each details}}
             <div class="table__row panel__line">
-                <div class="table__col">aff/pzp_test</div>
-                <div class="table__col">17/04/2020</div>
-                <div class="table__col">21</div>
-                <div class="table__col">221</div>
-                <div class="table__col">4</div>
-                <div class="table__col">7</div>
-                <div class="table__col">1</div>
-                <div class="table__col">6,328.00</div>
-                <div class="table__col">212</div>
-                <div class="table__col">2,554.11</div>
-                <div class="table__col">soad</div>
+                <div class="table__col">{{ trackerName }}</div>
+                <div class="table__col">{{ initiatedDate }}</div>
+                <div class="table__col">{{ visits }}</div>
+                <div class="table__col">{{ unique }}</div>
+                <div class="table__col">{{ signups }}</div>
+                <div class="table__col">{{ ftd }}</div>
+                <div class="table__col">{{ depositors }}</div>
+                <div class="table__col">{{ deposits }}</div>
+                <div class="table__col">{{ payouts }}</div>
+                <div class="table__col">{{ turnover }}</div>
+                <div class="table__col">{{ deal }}</div>
             </div>
-            <div class="table__row panel__line">
-                <div class="table__col">aff/bla_test</div>
-                <div class="table__col">17/05/2020</div>
-                <div class="table__col">8</div>
-                <div class="table__col">131</div>
-                <div class="table__col">2</div>
-                <div class="table__col">2</div>
-                <div class="table__col">9</div>
-                <div class="table__col">1,232.00</div>
-                <div class="table__col">441</div>
-                <div class="table__col">52,554.11</div>
-                <div class="table__col">ssa</div>
-            </div>
-            <div class="table__row panel__line">
-                <div class="table__col">aff/sam_test</div>
-                <div class="table__col">17/06/2020</div>
-                <div class="table__col">21</div>
-                <div class="table__col">221</div>
-                <div class="table__col">4</div>
-                <div class="table__col">7</div>
-                <div class="table__col">1</div>
-                <div class="table__col">6,328.00</div>
-                <div class="table__col">212</div>
-                <div class="table__col">2,554.11</div>
-                <div class="table__col">soad</div>
-            </div>
-            <div class="table__row panel__line">
-                <div class="table__col">aff/sam_test</div>
-                <div class="table__col">17/07/2020</div>
-                <div class="table__col">18</div>
-                <div class="table__col">1331</div>
-                <div class="table__col">2</div>
-                <div class="table__col">6</div>
-                <div class="table__col">3</div>
-                <div class="table__col">32,232.00</div>
-                <div class="table__col">773</div>
-                <div class="table__col">562,554.11</div>
-                <div class="table__col">ases</div>
-            </div>
-            <div class="table__row panel__line">
-                <div class="table__col">aff/sam_test</div>
-                <div class="table__col">17/08/2020</div>
-                <div class="table__col">5</div>
-                <div class="table__col">2</div>
-                <div class="table__col">5</div>
-                <div class="table__col">8</div>
-                <div class="table__col">2</div>
-                <div class="table__col">334.00</div>
-                <div class="table__col">3131</div>
-                <div class="table__col">34,230.02</div>
-                <div class="table__col">ases</div>
-            </div>
-            <div class="table__row panel__line">
-                <div class="table__col">aff/sam_test</div>
-                <div class="table__col">17/09/2020</div>
-                <div class="table__col">18</div>
-                <div class="table__col">1331</div>
-                <div class="table__col">2</div>
-                <div class="table__col">6</div>
-                <div class="table__col">3</div>
-                <div class="table__col">32,232.00</div>
-                <div class="table__col">212</div>
-                <div class="table__col">562,554.11</div>
-                <div class="table__col">ases</div>
-            </div>
-            <div class="table__row panel__line">
-                <div class="table__col">aff/asc_test</div>
-                <div class="table__col">17/10/2021</div>
-                <div class="table__col">18</div>
-                <div class="table__col">1331</div>
-                <div class="table__col">2</div>
-                <div class="table__col">6</div>
-                <div class="table__col">3</div>
-                <div class="table__col">2,232.00</div>
-                <div class="table__col">666</div>
-                <div class="table__col">562,554.11</div>
-                <div class="table__col">ases</div>
-            </div>
-            <div class="table__row panel__line">
-                <div class="table__col">aff/tas_test</div>
-                <div class="table__col">21/11/2020</div>
-                <div class="table__col">5</div>
-                <div class="table__col">2</div>
-                <div class="table__col">5</div>
-                <div class="table__col">8</div>
-                <div class="table__col">2</div>
-                <div class="table__col">334.00</div>
-                <div class="table__col">675</div>
-                <div class="table__col">34,230.02</div>
-                <div class="table__col">ases</div>
+        {{/each}}
             </div>
             <div class="table__pages">
                 <div class="icon-arrow-left table__pages__no"></div>
-                <div class="table__pages__no">1</div>
-                <div class="table__pages__no">2</div>
-                <div class="table__pages__no">3</div>
-                <div class="table__pages__no">4</div>
-                <div class="table__pages__no">5</div>
-                <div class="table__pages__no">6</div>
+            {{#each pagesNumber}}
+                <div class="table__pages__no">{{pageNumber}}</div>
+            {{/each}}
                 <div class="icon-arrow-right table__pages__no"></div>
             </div>
         </div>
