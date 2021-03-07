@@ -72,3 +72,12 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .table{
+    &__header{
+      font-size: 10px;
+    }
+    font-size: 10px;
+  }
+}

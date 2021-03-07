@@ -36,6 +36,9 @@
     &__title{
       padding-left: 15px;
     }
-
   } 
+
+  .panel.hidden {
+    display: none;
+  }
 }

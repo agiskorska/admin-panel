@@ -27,7 +27,12 @@
   min-height: 300px;
   margin-left: 16%;
   margin-right: $main-panel;
+  
+  &.hidden{
+    display: none;
+  }
 }
+
 
 @media (max-width: 992px) {
   .main{
@@ -40,6 +45,6 @@
   .panel{
     position: relative;
     width: 98%;
-    margin-left: $main-panel;
+    margin: 10px;
   }
 }

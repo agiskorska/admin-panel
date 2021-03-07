@@ -7,5 +7,15 @@
 @import "components/table";
 
 /* import sections */
-@import "pages/general";
 @import "pages/personal";
+
+@import "./sections/general";
+@import "./sections/header";
+@import "./sections/sidebar";
+@import "./sections/panel";
+@import "./sections/general-stats";
+@import "./components/links";
+@import "./components/date-picker";
+@import "./sections/popup";
+@import "./components/card";
+@import "./components/chat";

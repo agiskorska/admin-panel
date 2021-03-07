@@ -44,6 +44,12 @@
   }
 }
 
+.icon-close{
+  &:hover{
+    cursor: pointer;
+  }
+}
+
 .msg{
   &__sent, &__received{
     font-weight: 200;

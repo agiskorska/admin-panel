@@ -373,6 +373,10 @@ template {
   margin-right: 1%;
 }
 
+.panel.hidden {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .main {
     position: relative;
@@ -383,7 +387,7 @@ template {
   .panel {
     position: relative;
     width: 98%;
-    margin-left: 1%;
+    margin: 10px;
   }
 }
 
@@ -460,7 +464,48 @@ template {
   display: inline;
 }
 
+@media (max-width: 992px) {
+  .table {
+    font-size: 10px;
+  }
+  .table__header {
+    font-size: 10px;
+  }
+}
+
 /* import sections */
+.form .btn {
+  width: 150px;
+  color: white;
+  font-weight: 300;
+}
+
+.form .form__section {
+  padding: 3% 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form__name {
+  margin: 5px;
+  display: flex;
+  width: 40%;
+  line-height: 40px;
+}
+
+.form__name > * {
+  flex-basis: 50%;
+  padding: 0 5px;
+}
+
+.form__input {
+  border: #8181818e 1px solid;
+  border-radius: 3px;
+}
+
 .icon {
   display: inline-block;
   width: 20px;
@@ -486,12 +531,16 @@ template {
 
 .btn:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 @media (max-width: 992px) {
   .btn {
     font-size: 10px;
     color: white;
+  }
+  .btn:hover {
+    transform: none;
   }
 }
 
@@ -528,6 +577,48 @@ template {
   .header {
     display: none;
   }
+}
+
+.manager__heading {
+  padding: 5%;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.manager__prev {
+  padding: 5% 10%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.manager__prev-wrapper {
+  position: relative;
+  width: 55px;
+  height: 55px;
+}
+
+.manager__prev-img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 5%;
+}
+
+.manager__prev-status {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #05ec05;
+  top: 5px;
+  right: 5px;
+}
+
+.manager__prev-name {
+  padding-left: 10px;
 }
 
 .option__link, .title {
@@ -580,6 +671,7 @@ template {
   color: white;
   font-family: "Pacifico", cursive;
   padding-left: 10px;
+  padding-bottom: 4px;
 }
 
 .hamburger {
@@ -590,40 +682,8 @@ template {
   top: 5px;
 }
 
-.manager__heading {
-  padding: 5%;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-}
-
-.manager__prev {
-  padding: 5% 10%;
-  position: relative;
-}
-
-.manager__prev__img {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin-right: 5%;
-  position: relative;
-}
-
-.manager__prev__status {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: green;
-  top: 15%;
-  left: 25%;
-}
-
-.manager__prev__name {
-  position: absolute;
-  left: 100px;
-  top: 30px;
+.hamburger:hover {
+  cursor: pointer;
 }
 
 .sidenav, .sidebar-nav {
@@ -686,6 +746,9 @@ template {
   .manager__prev__status {
     display: none;
   }
+  .sidebar-toggle.hidden {
+    display: none;
+  }
 }
 
 .panel {
@@ -723,6 +786,9 @@ template {
   .panel__title {
     padding-left: 15px;
   }
+  .panel.hidden {
+    display: none;
+  }
 }
 
 .data {
@@ -749,6 +815,7 @@ template {
   .data {
     width: 100%;
     display: block;
+    padding: 0px;
   }
   .data__single {
     flex-basis: 100%;
@@ -875,6 +942,13 @@ template {
   font-size: 20px;
 }
 
+@media (max-width: 992px) {
+  .calendar {
+    width: 90%;
+    margin: 0 5px;
+  }
+}
+
 .overlay {
   position: fixed;
   z-index: 5;
@@ -983,6 +1057,10 @@ template {
   font-weight: 200;
 }
 
+.icon-close:hover {
+  cursor: pointer;
+}
+
 .msg__sent, .msg__received {
   font-weight: 200;
   position: relative;
@@ -1030,38 +1108,6 @@ template {
   border-left: 0;
   margin-left: 0;
   margin-top: -5px;
-}
-
-.form .btn {
-  width: 150px;
-  color: white;
-  font-weight: 300;
-}
-
-.form .form__section {
-  padding: 3% 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.form__name {
-  margin: 5px;
-  display: flex;
-  width: 40%;
-  line-height: 40px;
-}
-
-.form__name > * {
-  flex-basis: 50%;
-  padding: 0 5px;
-}
-
-.form__input {
-  border: #8181818e 1px solid;
-  border-radius: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */
