@@ -31,5 +31,21 @@
   &__input{
     border: $line 1px solid;
     border-radius: 3px;
+
+    &.error {
+      border-color: red;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .form{
+    width: 80%;
+
+    &__name{
+      width: 90%;
+      font-size: $phone-font-size;
+      line-height: 30px;
+    }
   }
 }

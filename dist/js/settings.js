@@ -15,6 +15,7 @@ export const select = {
     details: '.details',
     personalData: '.personal-data',
     banners: '.banners',
+    tablePage: '.table__pages'
   },
 
   elements: {
@@ -24,7 +25,8 @@ export const select = {
     sidebarToggle: '.sidebar-toggle',
     chat: '.overlay',
     manager: '.manager__prev',
-    close: '.icon-close'
+    close: '.icon-close',
+    popup: '.overlay',
   },
 
   classNames: {

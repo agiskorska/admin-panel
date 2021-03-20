@@ -404,7 +404,7 @@ template {
 
 .table__row, .table__header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -420,8 +420,11 @@ template {
 }
 
 .table__col {
-  flex-basis: 9%;
+  flex: 1;
   padding: 10px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .table__pages {
@@ -504,6 +507,21 @@ template {
 .form__input {
   border: #8181818e 1px solid;
   border-radius: 3px;
+}
+
+.form__input.error {
+  border-color: red;
+}
+
+@media (max-width: 992px) {
+  .form {
+    width: 80%;
+  }
+  .form__name {
+    width: 90%;
+    font-size: 10px;
+    line-height: 30px;
+  }
 }
 
 .icon {
@@ -910,7 +928,7 @@ template {
 }
 
 .date-picker__calendar {
-  width: 30%;
+  width: 60%;
   height: 40px;
   border: #8181818e 1px solid;
   border-radius: 3px;
@@ -934,15 +952,25 @@ template {
   border: none;
   color: #8181818e;
   font-family: "Roboto", sans-serif;
+  flex-basis: 45%;
+  text-align: center;
 }
 
 .calendar .icon-calendar {
   padding: 0 10px;
   border-left: #8181818e 1px solid;
   font-size: 20px;
+  flex-basis: 5%;
 }
 
 @media (max-width: 992px) {
+  .calendar {
+    width: 70%;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 768px) {
   .calendar {
     width: 90%;
     margin: 0 5px;
@@ -951,7 +979,7 @@ template {
 
 .overlay {
   position: fixed;
-  z-index: 5;
+  z-index: 999;
   width: 100%;
   height: 100%;
   top: 0;

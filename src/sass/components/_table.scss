@@ -9,7 +9,7 @@
   
   &__row, &__header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
   }
@@ -26,8 +26,11 @@
   }
 
   &__col{
-    flex-basis: 9%;
+    flex: 1;
     padding: 10px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__pages{
