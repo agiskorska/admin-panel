@@ -52,34 +52,35 @@ function generateChart() {
 
 }
 
-let imin = 0;
-let imax = 10;
-function getDetailsTable(object = {}) {
 
-  let pageNumbers = Math.ceil(tables.details.length/10);
-  if (Object.keys(object).length) {
-    if (!isNaN(object.id)) {
-      imin = (object.id-1)*10;
-      imax = imin+10;
-    } else if (object.action != 0) {
-      imin = (imin/10 + object.action)*10;
-      imax = imin+10;
-      if (imin < 0) {
-        imin = 0;
-        imax = 10;
-      } else if (imax > tables.details.length) {
-        imax = tables.details.length;
-        imin = imax - 10;
+function getDetailsTable(tableData = {}) {
+  let currentFirstRecord = 0;
+  let currentLastRecord = 10;
+  let totalPageNumberRequired = Math.ceil(tables.details.length/10);
+
+  if (Object.keys(tableData).length) {
+    if (!isNaN(tableData.id)) {
+      currentFirstRecord = (tableData.id-1)*10;
+      currentLastRecord = currentFirstRecord+10;
+    } else if (tableData.action != 0) {
+      currentFirstRecord = (currentFirstRecord/10 + tableData.action)*10;
+      currentLastRecord = currentFirstRecord+10;
+      if (currentFirstRecord < 0) {
+        currentFirstRecord = 0;
+        currentLastRecord = 10;
+      } else if (currentLastRecord > tables.details.length) {
+        currentLastRecord = tables.details.length;
+        currentFirstRecord = currentLastRecord - 10;
       }
     }
   }
-  console.log(imin, imax);
+  console.log(currentFirstRecord, currentLastRecord);
 
   let howManyPages = [];
   const slicedObj = {tables: {}};
-  slicedObj.tables.details = tables.details.slice(imin,imax);
+  slicedObj.tables.details = tables.details.slice(currentFirstRecord,currentLastRecord);
 
-  for (let j = 1; j <= pageNumbers; j++) {
+  for (let j = 1; j <= totalPageNumberRequired; j++) {
     const pageNumber = {pageNumber: j};
     howManyPages.push(pageNumber);
   }
@@ -126,17 +127,18 @@ function toggleHidden(element, targetElement) {
 }
 
 function validateForm() {
-  document.querySelector('form').addEventListener('submit', function(event) {
+  document.querySelector('form').addEventListener('submit', function(event) { 
     let isFormValidate = true;
+    /* eslint-disable */
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let emailAddressInput = event.target.querySelector('input[name="email_address"]');
-
+    /* eslint-enable */
     if (!re.test(emailAddressInput.value)) {
       isFormValidate = false;
       emailAddressInput.classList.add('error');
       window.scrollBy(0, -300);
     }
-    const requiredInputs = this.querySelectorAll('.required');
+    const requiredInputs = event.currentTarget.querySelectorAll('.required');
     for (let requiredInput of requiredInputs) {
       isFormValidate = required(requiredInput, isFormValidate);
     }
@@ -182,19 +184,17 @@ generateHandlebars(select.templateOf.generalStats, select.wrapper.generalStats);
 generateHandlebars(select.templateOf.links, select.wrapper.links);
 generateHandlebars(select.templateOf.personalData, select.wrapper.personalData);
 generateHandlebars(select.templateOf.banners, select.wrapper.banners);
+generateHandlebars(select.templateOf.details, select.wrapper.details, getDetailsTable());
 activateMenu();
 toggleHidden(select.elements.hamburger, select.elements.sidebarToggle);
 toggleHidden(select.elements.manager, select.elements.chat);
 toggleHidden(select.elements.close, select.elements.chat);
-generateHandlebars(select.templateOf.details, select.wrapper.details, getDetailsTable());
 addEventListeners();
 generateChart();
 validateForm();
 
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
-    console.log('eskejp wcisniety', document.querySelector(select.elements.popup));
-
     document.querySelector(select.elements.popup).classList.add(select.classNames.hidden);
   } 
 });
